@@ -1,8 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<title>Kanujibay International Business</title>
 
 <style>
 body{
@@ -13,20 +8,24 @@ body{
   scroll-behavior:smooth;
 }
 
-/* HEADER */
+/* HEADER PREMIUM */
 header{
   position:fixed;
   top:0;
   width:100%;
-  background:#0f172a;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:10px 20px;
+  padding:12px 20px;
   z-index:1000;
+
+  background: linear-gradient(90deg, #064e3b, #0b1220, #ea580c);
 }
 
-.logo{width:45px;border-radius:8px;}
+.logo{
+  width:45px;
+  border-radius:8px;
+}
 
 nav a{
   color:white;
@@ -36,21 +35,12 @@ nav a{
 }
 
 .btn{
-  background:green;
+  background:#ea580c;
   padding:8px 12px;
   border-radius:6px;
   color:white;
   text-decoration:none;
 }
-
-/* LANG */
-.lang{
-  position:absolute;
-  right:10px;
-  top:5px;
-  font-size:12px;
-}
-.lang a{color:white;margin:0 4px;text-decoration:none}
 
 /* HERO */
 .hero{
@@ -61,19 +51,15 @@ nav a{
   justify-content:center;
   align-items:center;
   text-align:center;
-  text-shadow:2px 2px 10px black;
-  position:relative;
 }
 
-.hero h1{font-size:42px}
-
-/* ✈️ ANIMATION AVION */
+/* ANIMATION AVION */
 .plane{
   position:absolute;
   top:20%;
   left:-200px;
   width:120px;
-  animation:fly 12s linear infinite;
+  animation:fly 10s linear infinite;
 }
 
 @keyframes fly{
@@ -86,8 +72,6 @@ section{
   padding:100px 20px;
   text-align:center;
 }
-
-h2{margin-bottom:20px}
 
 /* GRID */
 .grid{
@@ -102,100 +86,67 @@ h2{margin-bottom:20px}
   width:240px;
   padding:10px;
   border-radius:10px;
-  transition:0.3s;
 }
 
-.card:hover{
-  transform:scale(1.05);
-}
-
-.card img{width:100%;border-radius:8px}
-
-/* CONTACT */
-form{
+/* DASHBOARD */
+.dash{
   display:flex;
-  flex-direction:column;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+}
+
+.box{
+  background:#111827;
+  width:220px;
+  padding:15px;
+  border-radius:10px;
+}
+
+/* LOGIN */
+.loginBox{
+  background:#111827;
   width:300px;
   margin:auto;
+  padding:20px;
+  border-radius:10px;
 }
 
-input,textarea{
-  margin:8px 0;
+input{
+  width:90%;
   padding:10px;
-  border-radius:6px;
+  margin:8px 0;
   border:none;
+  border-radius:6px;
 }
 
 button{
-  background:green;
+  background:#ea580c;
   color:white;
   padding:10px;
   border:none;
   border-radius:6px;
+  cursor:pointer;
 }
 
-/* WHATSAPP FLOAT */
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:green;
-  padding:15px;
-  border-radius:50%;
-  color:white;
-  font-size:20px;
-  text-decoration:none;
+/* MAP */
+iframe{
+  width:90%;
+  height:400px;
+  border-radius:10px;
+  border:none;
 }
 </style>
-</head>
-
-<body>
-
-<!-- 🌍 LANG -->
-<div class="lang">
-  <a onclick="setLang('fr')">FR</a> |
-  <a onclick="setLang('en')">EN</a> |
-  <a onclick="setLang('ru')">RU</a> |
-  <a onclick="setLang('ua')">UA</a>
-</div>
-
-<!-- HEADER -->
-<header>
-  <div style="display:flex;align-items:center;gap:10px;">
-    <img src="logo.png" class="logo">
-    <strong>Kanujibay</strong>
-  </div>
-
-  <nav>
-    <a href="#about" data-i18n="about">À propos</a>
-    <a href="#services" data-i18n="services">Services</a>
-    <a href="#catalogue" data-i18n="catalogue">Catalogue</a>
-    <a href="#invest" data-i18n="invest">Investisseurs</a>
-    <a href="#contact" data-i18n="contact">Contact</a>
-  </nav>
-
-  <a class="btn" href="https://wa.me/33623956821">WhatsApp</a>
-</header>
-
-<!-- HERO -->
 <section class="hero">
+  <img src="plane.png" class="plane">
 
-<img src="plane.png" class="plane">
-
-<h1 data-i18n="title">Kanujibay International Business</h1>
-<p data-i18n="subtitle">Import - Export Café Vert | Afrique → Europe | Trading Global</p>
-
+  <h1>Kanujibay International Business</h1>
+  <p>Export Café Vert Afrique → Europe | Trading Global</p>
 </section>
+<section>
+<h2>À propos de nous</h2>
 
-<!-- ABOUT -->
-<section id="about">
-<h2 data-i18n="aboutTitle">À propos de nous</h2>
-
-<p data-i18n="aboutText">
-Entreprise spécialisée dans l’import-export de café vert entre l’Afrique et l’Europe.
-</p>
-
-<h3>CEO & Direction</h3>
+<p>Entreprise spécialisée dans le café vert et le commerce international.</p>
 
 <div class="grid">
   <div class="card"><img src="org1.png"><p>CEO</p></div>
@@ -203,34 +154,62 @@ Entreprise spécialisée dans l’import-export de café vert entre l’Afrique 
   <div class="card"><img src="org3.png"><p>Logistics</p></div>
 </div>
 </section>
+<section>
+<h2>Dashboard Investisseurs</h2>
 
-<!-- SERVICES -->
-<section id="services">
-<h2 data-i18n="servicesTitle">Nos Services</h2>
+<div class="dash">
 
-<div class="grid">
-
-<div class="card">
-<img src="1.png">
-<p>Import / Export Café</p>
+<div class="box">
+<h3>📦 Export mensuel</h3>
+<p>12 - 25 tonnes café vert</p>
 </div>
 
-<div class="card">
-<img src="2.png">
-<p>Trading International</p>
+<div class="box">
+<h3>🌍 Marchés</h3>
+<p>Europe / Afrique / Moyen-Orient</p>
 </div>
 
-<div class="card">
-<img src="3.png">
-<p>Logistique Globale</p>
+<div class="box">
+<h3>📈 Croissance</h3>
+<p>+28% annuel</p>
+</div>
+
+<div class="box">
+<h3>🤝 Partenaires</h3>
+<p>Importateurs & traders globaux</p>
 </div>
 
 </div>
 </section>
+<section>
+<h2>Flux Afrique → Europe</h2>
 
-<!-- CATALOGUE -->
-<section id="catalogue">
-<h2>Catalogue Café Export</h2>
+<iframe
+src="https://www.google.com/maps?q=africa+europe&output=embed">
+</iframe>
+
+<p>Routes commerciales du café vert vers l’Europe.</p>
+</section>
+<section>
+<h2>Espace Collaborateurs</h2>
+
+<div class="loginBox">
+  <input type="text" placeholder="Login">
+  <input type="password" placeholder="Mot de passe">
+  <button onclick="login()">Connexion</button>
+
+  <p id="msg"></p>
+</div>
+</section>
+
+<script>
+function login(){
+  document.getElementById("msg").innerText =
+  "Accès temporairement simulé - espace sécurisé en développement";
+}
+</script>
+<section>
+<h2>Catalogue Export Café</h2>
 
 <div class="grid">
   <div class="card"><img src="pdf diapo 4.png"></div>
@@ -239,90 +218,21 @@ Entreprise spécialisée dans l’import-export de café vert entre l’Afrique 
   <div class="card"><img src="pdf diapo 9.png"></div>
 </div>
 </section>
-
-<!-- INVEST -->
-<section id="invest">
-<h2>Investisseurs</h2>
-
-<p>
-Opportunités d’investissement dans le commerce international du café.
-</p>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
+<section>
 <h2>Contact / Devis</h2>
 
-<form>
 <input placeholder="Nom">
 <input placeholder="Email">
-<textarea placeholder="Message / Devis"></textarea>
+<textarea placeholder="Votre demande"></textarea>
+<br>
 <button>Envoyer</button>
-</form>
+
+<p>Email: kanujibayinternationalbusiness@gmail.com</p>
+<p>WhatsApp: +33623956821</p>
 </section>
-
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/33623956821">💬</a>
-
-<!-- 🌍 TRANSLATION SCRIPT -->
-<script>
-const texts = {
-  fr:{
-    title:"Kanujibay International Business",
-    subtitle:"Import - Export Café Vert | Afrique → Europe | Trading Global",
-    about:"À propos",
-    services:"Services",
-    catalogue:"Catalogue",
-    invest:"Investisseurs",
-    contact:"Contact",
-    aboutTitle:"À propos de nous",
-    aboutText:"Entreprise spécialisée dans l’import-export de café vert entre l’Afrique et l’Europe.",
-    servicesTitle:"Nos Services"
-  },
-  en:{
-    title:"Kanujibay International Business",
-    subtitle:"Green Coffee Import - Export | Africa → Europe | Global Trading",
-    about:"About",
-    services:"Services",
-    catalogue:"Catalogue",
-    invest:"Investors",
-    contact:"Contact",
-    aboutTitle:"About Us",
-    aboutText:"Company specialized in green coffee import-export between Africa and Europe.",
-    servicesTitle:"Our Services"
-  },
-  ru:{
-    title:"Kanujibay Международный бизнес",
-    subtitle:"Импорт-экспорт кофе | Африка → Европа",
-    about:"О нас",
-    services:"Услуги",
-    catalogue:"Каталог",
-    invest:"Инвесторы",
-    contact:"Контакты",
-    aboutTitle:"О компании",
-    aboutText:"Компания по экспорту зеленого кофе между Африкой и Европой.",
-    servicesTitle:"Наши услуги"
-  },
-  ua:{
-    title:"Kanujibay Міжнародний бізнес",
-    subtitle:"Імпорт-експорт кави | Африка → Європа",
-    about:"Про нас",
-    services:"Послуги",
-    catalogue:"Каталог",
-    invest:"Інвестори",
-    contact:"Контакти",
-    aboutTitle:"Про компанію",
-    aboutText:"Компанія з експорту зеленої кави між Африкою та Європою.",
-    servicesTitle:"Наші послуги"
-  }
-};
-
-function setLang(lang){
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
-    el.innerText = texts[lang][el.getAttribute("data-i18n")];
-  });
-}
-</script>
-
-</body>
-</html>
+<a href="https://wa.me/33623956821"
+style="position:fixed;bottom:20px;right:20px;
+background:#ea580c;padding:15px;border-radius:50%;
+color:white;text-decoration:none;">
+💬
+</a>
