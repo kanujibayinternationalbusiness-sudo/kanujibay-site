@@ -37,3 +37,20 @@
 
   </div>
 </section>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"></script>
+<script>
+function register(){
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+  .then((userCredential) => {
+    document.getElementById("msg").innerText = "Account created successfully";
+  })
+  .catch((error) => {
+    document.getElementById("msg").innerText = error.message;
+    console.log(error.code, error.message);
+  });
+}
+</script>
