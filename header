@@ -1,0 +1,16 @@
+<div class="lang">
+  <a href="#">FR</a> |
+  <a href="#">EN</a> |
+  <a href="#">RU</a> |
+  <a href="#">UA</a>
+</div>.lang {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  font-size: 14px;
+}
+
+.lang a {
+  color: white;
+  margin: 0 5px;
+  text-decoration: none;
