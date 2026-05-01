@@ -1,208 +1,273 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Kanujibay International Business</title>
+<meta charset="UTF-8">
+<title>Kanujibay International Business</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b1220;
-      color: white;
-      scroll-behavior: smooth;
-    }
+<style>
+body {
+  margin:0;
+  font-family: Arial;
+  background:#0b1220;
+  color:white;
+  scroll-behavior:smooth;
+}
 
-    /* HEADER */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 25px;
-      background: #0f172a;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
+/* HEADER */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#0f172a;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 20px;
+  z-index:1000;
+}
 
-    .logo {
-      width: 45px;
-      height: 45px;
-      border-radius: 8px;
-    }
+.logo{width:45px;border-radius:8px;}
 
-    nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+nav a{
+  color:white;
+  margin:0 8px;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-    .btn {
-      background: green;
-      padding: 10px 14px;
-      border-radius: 8px;
-      color: white;
-      text-decoration: none;
-    }
+/* LANG */
+.lang{
+  position:absolute;
+  right:10px;
+  top:5px;
+  font-size:12px;
+}
+.lang a{color:white;margin:0 4px;text-decoration:none}
 
-    /* SPACER */
-    .spacer {
-      height: 70px;
-    }
+/* BUTTON */
+.btn{
+  background:green;
+  padding:8px 12px;
+  border-radius:6px;
+  color:white;
+  text-decoration:none;
+}
 
-    /* HERO */
-    .hero {
-      background: url("0.png") center/cover no-repeat;
-      height: 90vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      text-shadow: 2px 2px 10px black;
-    }
+/* SECTIONS */
+section{
+  padding:100px 20px;
+  text-align:center;
+}
 
-    .hero h1 {
-      font-size: 40px;
-    }
+.hero{
+  background:url("0.png") center/cover no-repeat;
+  height:90vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-shadow:2px 2px 10px black;
+}
 
-    /* SECTIONS */
-    section {
-      padding: 80px 20px;
-      text-align: center;
-    }
+h1{font-size:40px}
 
-    h2 {
-      margin-bottom: 20px;
-    }
+/* GRID */
+.grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+}
 
-    /* GRID */
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
+.card{
+  background:#111827;
+  width:250px;
+  padding:10px;
+  border-radius:10px;
+}
 
-    .card {
-      background: #111827;
-      width: 250px;
-      padding: 10px;
-      border-radius: 12px;
-    }
+.card img{width:100%;border-radius:8px}
 
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-    }
+/* FORM */
+form{
+  display:flex;
+  flex-direction:column;
+  width:300px;
+  margin:auto;
+}
 
-    /* CONTACT */
-    .contact {
-      background: #111827;
-      padding: 20px;
-      border-radius: 10px;
-      display: inline-block;
-    }
+input,textarea{
+  margin:8px 0;
+  padding:10px;
+  border:none;
+  border-radius:6px;
+}
 
-    footer {
-      background: #0f172a;
-      padding: 20px;
-      text-align: center;
-    }
-  </style>
+button{
+  background:green;
+  color:white;
+  padding:10px;
+  border:none;
+  border-radius:6px;
+}
+
+/* MAP */
+iframe{
+  width:80%;
+  height:300px;
+  border:none;
+  border-radius:10px;
+}
+</style>
 </head>
 
 <body>
 
+<!-- LANG -->
+<div class="lang">
+  <a href="#">FR</a> |
+  <a href="#">EN</a> |
+  <a href="#">RU</a> |
+  <a href="#">UA</a>
+</div>
+
 <!-- HEADER -->
 <header>
-  <div style="display:flex; align-items:center; gap:10px;">
+  <div style="display:flex;align-items:center;gap:10px;">
     <img src="logo.png" class="logo">
     <strong>Kanujibay</strong>
   </div>
 
   <nav>
-    <a href="#accueil">Accueil</a>
+    <a href="#about">À propos</a>
     <a href="#services">Services</a>
-    <a href="#galerie">Galerie</a>
+    <a href="#catalogue">Catalogue</a>
+    <a href="#invest">Investisseurs</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <a class="btn" href="https://wa.me/33623956821">WhatsApp</a>
 </header>
 
-<div class="spacer"></div>
-
 <!-- HERO -->
-<section id="accueil" class="hero">
+<section class="hero">
   <h1>Kanujibay International Business</h1>
-  <p>Import - Export Café Vert - Afrique → Europe - Logistique internationale</p>
+  <p>Import - Export Café Vert | Afrique → Europe | Trading Global</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<h2>À propos de nous</h2>
+
+<p>
+Kanujibay International Business est une société spécialisée dans l’import-export de café vert et le commerce international.
+</p>
+
+<h3>Direction</h3>
+<p>
+Entreprise dirigée par un CEO et son équipe familiale d’entrepreneurs spécialisés en commerce international.
+</p>
+
+<!-- ORGANIGRAMME -->
+<div class="grid">
+  <div class="card">
+    <img src="org1.png">
+    <p>CEO - Direction générale</p>
+  </div>
+
+  <div class="card">
+    <img src="org2.png">
+    <p>Responsable export</p>
+  </div>
+
+  <div class="card">
+    <img src="org3.png">
+    <p>Logistique internationale</p>
+  </div>
+</div>
+
 </section>
 
 <!-- SERVICES -->
 <section id="services">
-  <h2>Nos Activités</h2>
+<h2>Nos Services</h2>
 
-  <div class="grid">
-    <div class="card">
-      <img src="1.png">
-      <p>Export Café Vert</p>
-    </div>
+<div class="grid">
 
-    <div class="card">
-      <img src="2.png">
-      <p>Commerce International</p>
-    </div>
+<div class="card">
+<img src="1.png">
+<h3>Import / Export Café</h3>
+<p>Afrique vers Europe et monde</p>
+</div>
 
-    <div class="card">
-      <img src="3.png">
-      <p>Partenariats Europe/Afrique</p>
-    </div>
-  </div>
+<div class="card">
+<img src="2.png">
+<h3>Trading International</h3>
+<p>Partenariats commerciaux globaux</p>
+</div>
+
+<div class="card">
+<img src="3.png">
+<h3>Logistique</h3>
+<p>Transport maritime & aérien</p>
+</div>
+
+</div>
 </section>
 
-<!-- GALERIE IMAGES PDF -->
-<section id="galerie">
-  <h2>Projets & Documents</h2>
+<!-- CATALOGUE -->
+<section id="catalogue">
+<h2>Catalogue Café Export</h2>
 
-  <div class="grid">
-    <div class="card"><img src="pdf diapo 4.png"></div>
-    <div class="card"><img src="pdf diapo 6.png"></div>
-    <div class="card"><img src="pdf diapo 7.png"></div>
-    <div class="card"><img src="pdf diapo 9.png"></div>
-    <div class="card"><img src="pdf diapo 10.png"></div>
-    <div class="card"><img src="pdf diapo 11.png"></div>
-    <div class="card"><img src="pdf diapo 12.png"></div>
-    <div class="card"><img src="pdf diapo 13.png"></div>
-    <div class="card"><img src="pdf diapo 14.png"></div>
-    <div class="card"><img src="pdf diapo 15.png"></div>
-    <div class="card"><img src="pdf diapo 16.png"></div>
-    <div class="card"><img src="pdf diapo 17.png"></div>
-    <div class="card"><img src="pdf diapo 18.png"></div>
-    <div class="card"><img src="pdf diapo 19.png"></div>
-    <div class="card"><img src="pdf diapo 20.png"></div>
-    <div class="card"><img src="pdf diapo 21.png"></div>
-    <div class="card"><img src="pdf diapo 22.png"></div>
-    <div class="card"><img src="pdf diapo 25.png"></div>
-  </div>
+<div class="grid">
+  <div class="card"><img src="pdf diapo 4.png"></div>
+  <div class="card"><img src="pdf diapo 6.png"></div>
+  <div class="card"><img src="pdf diapo 7.png"></div>
+  <div class="card"><img src="pdf diapo 9.png"></div>
+</div>
+</section>
+
+<!-- INVESTORS -->
+<section id="invest">
+<h2>Investisseurs</h2>
+
+<p>
+Nous recherchons des partenaires internationaux pour développer la chaîne d’exportation du café.
+</p>
+
+<p>
+✔ Opportunités d’investissement  
+✔ Commerce agricole international  
+✔ Expansion Afrique → Europe  
+</p>
+</section>
+
+<!-- MAP -->
+<section>
+<h2>Afrique → Europe</h2>
+
+<iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!..." 
+allowfullscreen>
+</iframe>
+
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <h2>Contact</h2>
+<h2>Contact & Devis</h2>
 
-  <div class="contact">
-    <p>Email: kanujibayinternationalbusiness@gmail.com</p>
-    <p>WhatsApp: +33623956821</p>
-    <p>Tel: +33637333066</p>
-  </div>
+<form>
+<input placeholder="Nom">
+<input placeholder="Email">
+<textarea placeholder="Votre demande de devis"></textarea>
+<button>Envoyer demande</button>
+</form>
+
+<p>Email: kanujibayinternationalbusiness@gmail.com</p>
+<p>WhatsApp: +33623956821</p>
+
 </section>
-
-<footer>
-  © 2026 Kanujibay International Business
-</footer>
 
 </body>
 </html>
