@@ -315,3 +315,69 @@ document.querySelector("[data-i18n='subtitle']").innerText=texts[lang].subtitle;
 
 </body>
 </html>
+<script>
+
+// 🔐 SURVEILLER SI UTILISATEUR CONNECTÉ
+firebase.auth().onAuthStateChanged(user => {
+  if (user) {
+    document.getElementById("status").innerText = "Connected: " + user.email;
+    document.getElementById("private").style.display = "block";
+    document.getElementById("login").style.display = "none";
+  } else {
+    document.getElementById("private").style.display = "none";
+    document.getElementById("login").style.display = "block";
+  }
+});
+
+// 🚪 LOGOUT
+function logout(){
+  firebase.auth().signOut();
+}
+
+</script>
+<section id="login">
+
+<h2>Private Access</h2>
+
+<div style="width:300px;margin:auto;background:#111827;padding:20px;border-radius:10px;">
+
+<input id="email" placeholder="Email"><br>
+<input id="password" type="password" placeholder="Password"><br><br>
+
+<button onclick="login()">Login</button>
+<button onclick="register()">Register</button>
+
+<p id="msg"></p>
+
+</div>
+
+</section>
+<section id="private" style="display:none;">
+
+<h2>Investor Dashboard</h2>
+
+<p id="status"></p>
+
+<div style="display:flex;gap:15px;justify-content:center;flex-wrap:wrap;">
+
+<div style="background:#111827;padding:20px;border-radius:10px;width:200px;">
+📦 Export Coffee<br>12–25 tons/month
+</div>
+
+<div style="background:#111827;padding:20px;border-radius:10px;width:200px;">
+🌍 Markets<br>Europe / Africa / Middle East
+</div>
+
+<div style="background:#111827;padding:20px;border-radius:10px;width:200px;">
+📈 Growth<br>+28% yearly
+</div>
+
+</div>
+
+<br>
+
+<button onclick="logout()" style="background:#f97316;padding:10px;border:none;border-radius:6px;color:white;">
+Logout
+</button>
+
+</section>
