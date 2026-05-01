@@ -1,36 +1,33 @@
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Kanujibay International Business</title>
+<title>Kanujibay International Trading</title>
 
 <style>
 body{
   margin:0;
   font-family:Arial;
-  background:#0b1220;
+  background:linear-gradient(180deg,#064e3b,#0b1220,#f97316);
   color:white;
   scroll-behavior:smooth;
 }
 
-/* HEADER PRO */
+/* HEADER */
 header{
   position:fixed;
   top:0;
   width:100%;
-  background:linear-gradient(90deg,#064e3b,#0b1220,#f97316);
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:12px 20px;
+  padding:10px 20px;
+  background:rgba(0,0,0,0.7);
   z-index:1000;
 }
 
-.logo{
-  width:45px;
-  border-radius:8px;
-}
+.logo{width:45px;border-radius:8px;}
 
 nav a{
   color:white;
@@ -56,7 +53,20 @@ nav a{
   justify-content:center;
   align-items:center;
   text-align:center;
-  text-shadow:2px 2px 10px black;
+}
+
+/* ✈️ PLANE ANIMATION */
+.plane{
+  position:absolute;
+  top:20%;
+  left:-200px;
+  width:120px;
+  animation:fly 12s linear infinite;
+}
+
+@keyframes fly{
+  0%{transform:translateX(-200px)}
+  100%{transform:translateX(120vw)}
 }
 
 /* SECTIONS */
@@ -65,9 +75,7 @@ section{
   text-align:center;
 }
 
-h2{color:#f97316}
-
-/* GRID */
+/* GRID / CARDS */
 .grid{
   display:flex;
   flex-wrap:wrap;
@@ -76,10 +84,15 @@ h2{color:#f97316}
 }
 
 .card{
-  background:#111827;
+  background:rgba(0,0,0,0.5);
   width:240px;
   padding:10px;
   border-radius:10px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:scale(1.05);
 }
 
 .card img{
@@ -87,17 +100,19 @@ h2{color:#f97316}
   border-radius:8px;
 }
 
-/* CONTACT */
-form{
-  display:flex;
-  flex-direction:column;
+/* LOGIN */
+.loginBox{
+  background:rgba(0,0,0,0.6);
   width:300px;
   margin:auto;
+  padding:20px;
+  border-radius:10px;
 }
 
-input,textarea{
-  margin:8px 0;
+input{
+  width:90%;
   padding:10px;
+  margin:8px 0;
   border:none;
   border-radius:6px;
 }
@@ -111,30 +126,55 @@ button{
   cursor:pointer;
 }
 
-/* FOOTER */
-footer{
-  background:#064e3b;
-  padding:20px;
-  text-align:center;
+/* MAP */
+iframe{
+  width:90%;
+  height:400px;
+  border-radius:10px;
+  border:none;
+}
+
+/* LANG */
+.lang{
+  position:absolute;
+  top:5px;
+  right:10px;
+  font-size:12px;
+}
+
+.lang a{
+  color:white;
+  margin:0 5px;
+  text-decoration:none;
 }
 </style>
 </head>
 
 <body>
 
+<!-- 🌍 LANG -->
+<div class="lang">
+<a onclick="setLang('en')">EN</a> |
+<a onclick="setLang('fr')">FR</a> |
+<a onclick="setLang('ru')">RU</a> |
+<a onclick="setLang('ua')">UA</a>
+</div>
+
 <!-- HEADER -->
 <header>
 
 <div style="display:flex;align-items:center;gap:10px;">
-  <img src="logo.png" class="logo">
-  <strong>Kanujibay Business</strong>
+<img src="logo.png" class="logo">
+<strong>Kanujibay Global Trading</strong>
 </div>
 
 <nav>
-  <a href="#about">À propos</a>
-  <a href="#services">Services</a>
-  <a href="#catalogue">Catalogue</a>
-  <a href="#contact">Contact</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#catalogue">Catalogue</a>
+<a href="#map">Route</a>
+<a href="#invest">Investors</a>
+<a href="#login">Login</a>
 </nav>
 
 <a class="btn" href="https://wa.me/33623956821">WhatsApp</a>
@@ -143,47 +183,46 @@ footer{
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Kanujibay International Business</h1>
-  <p>Import - Export Café Vert | Afrique → Europe</p>
+
+<img src="plane.png" class="plane">
+
+<h1 data-i18n="title">Global Coffee Trading Company</h1>
+<p data-i18n="subtitle">Africa → Europe | Green Coffee Export | Logistics & Trade</p>
+
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-<h2>À propos de nous</h2>
+<h2>About Us</h2>
 
 <p>
-Entreprise spécialisée dans le café vert et le commerce international entre l’Afrique et l’Europe.
+International trading company specialized in green coffee export from Africa to Europe.
 </p>
 
 <div class="grid">
-
-<div class="card">
-<img src="logo entreprise 2 complet.png">
-<p>Direction Générale</p>
-</div>
-
+<div class="card"><img src="logo entreprise 2 complet.png"><p>CEO Office</p></div>
 </div>
 </section>
 
 <!-- SERVICES -->
 <section id="services">
-<h2>Nos Services</h2>
+<h2>Services</h2>
 
 <div class="grid">
 
 <div class="card">
 <img src="1.png">
-<p>Export Café Vert</p>
+<p>Coffee Export</p>
 </div>
 
 <div class="card">
 <img src="2.png">
-<p>Trading International</p>
+<p>Global Trading</p>
 </div>
 
 <div class="card">
 <img src="3.png">
-<p>Logistique Mondiale</p>
+<p>Logistics</p>
 </div>
 
 </div>
@@ -191,7 +230,7 @@ Entreprise spécialisée dans le café vert et le commerce international entre l
 
 <!-- CATALOGUE -->
 <section id="catalogue">
-<h2>Catalogue Café Export</h2>
+<h2>Export Catalogue</h2>
 
 <div class="grid">
 
@@ -199,44 +238,80 @@ Entreprise spécialisée dans le café vert et le commerce international entre l
 <div class="card"><img src="pdf diapo 6.png"></div>
 <div class="card"><img src="pdf diapo 7.png"></div>
 <div class="card"><img src="pdf diapo 9.png"></div>
-<div class="card"><img src="pdf diapo 10.png"></div>
-<div class="card"><img src="pdf diapo 11.png"></div>
-<div class="card"><img src="pdf diapo 12.png"></div>
-<div class="card"><img src="pdf diapo 13.png"></div>
-<div class="card"><img src="pdf diapo 14.png"></div>
-<div class="card"><img src="pdf diapo 15.png"></div>
-<div class="card"><img src="pdf diapo 16.png"></div>
-<div class="card"><img src="pdf diapo 17.png"></div>
-<div class="card"><img src="pdf diapo 18.png"></div>
-<div class="card"><img src="pdf diapo 19.png"></div>
-<div class="card"><img src="pdf diapo 20.png"></div>
-<div class="card"><img src="pdf diapo 21.png"></div>
-<div class="card"><img src="pdf diapo 22.png"></div>
-<div class="card"><img src="pdf diapo 25.png"></div>
 
 </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-<h2>Contact</h2>
+<!-- MAP -->
+<section id="map">
+<h2>Africa → Europe Trade Route</h2>
 
-<form>
-<input placeholder="Nom">
-<input placeholder="Email">
-<textarea placeholder="Votre message"></textarea>
-<button>Envoyer</button>
-</form>
-
-<p>Email: kanujibayinternationalbusiness@gmail.com</p>
-<p>WhatsApp: +33623956821</p>
-
+<iframe src="https://www.google.com/maps?q=africa+europe&output=embed"></iframe>
 </section>
 
-<!-- FOOTER -->
-<footer>
-© 2026 Kanujibay International Business
-</footer>
+<!-- INVESTORS -->
+<section id="invest">
+<h2>Investor Dashboard</h2>
+
+<div class="grid">
+<div class="card"><p>📦 12-25 tons/month</p></div>
+<div class="card"><p>🌍 Global markets</p></div>
+<div class="card"><p>📈 +28% growth</p></div>
+<div class="card"><p>🤝 International partners</p></div>
+</div>
+</section>
+
+<!-- LOGIN -->
+<section id="login">
+<h2>Private Access</h2>
+
+<div class="loginBox">
+<input placeholder="Email">
+<input type="password" placeholder="Password">
+<button onclick="fakeLogin()">Login</button>
+<p id="msg"></p>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section>
+<h2>Contact</h2>
+
+<input placeholder="Name">
+<input placeholder="Email">
+<textarea placeholder="Message / Quote request"></textarea>
+<br><br>
+<button>Send</button>
+</section>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/33623956821"
+style="position:fixed;bottom:20px;right:20px;
+background:#f97316;padding:15px;border-radius:50%;
+color:white;text-decoration:none;">💬</a>
+
+<script>
+
+/* SIMPLE LOGIN MOCK */
+function fakeLogin(){
+document.getElementById("msg").innerText =
+"Access system coming soon (Firebase integration next step)";
+}
+
+/* TRANSLATION */
+const texts={
+en:{title:"Global Coffee Trading Company",subtitle:"Africa → Europe | Green Coffee Export | Logistics & Trade"},
+fr:{title:"Entreprise de Trading International",subtitle:"Afrique → Europe | Export Café Vert"},
+ru:{title:"Международная торговая компания",subtitle:"Африка → Европа | Экспорт кофе"},
+ua:{title:"Міжнародна торгова компанія",subtitle:"Африка → Європа | Експорт кави"}
+};
+
+function setLang(lang){
+document.querySelector("[data-i18n='title']").innerText=texts[lang].title;
+document.querySelector("[data-i18n='subtitle']").innerText=texts[lang].subtitle;
+}
+
+</script>
 
 </body>
 </html>
