@@ -1,59 +1,206 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Kanujibay International Business</title>
-<style>
-body {
-    font-family: Arial;
-    margin: 0;
-    background: #f5f5f5;
-    text-align: center;
-}
-header {
-    background: #0a7c3a;
-    color: white;
-    padding: 20px;
-}
-h1 {
-    margin: 0;
-}
-.section {
-    padding: 40px;
-}
-.btn {
-    background: orange;
-    color: white;
-    padding: 15px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Kanujibay International Business</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1220;
+      color: white;
+      scroll-behavior: smooth;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 25px;
+      background: rgba(15, 23, 42, 0.95);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 45px;
+      height: 45px;
+      border-radius: 8px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn {
+      background: green;
+      padding: 10px 14px;
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #f8fafc;
+    }
+
+    /* HERO IMAGE (AVION + CAFÉ) */
+    .hero {
+      background: url("0.png") center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 2px 2px 10px black;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+    }
+
+    /* GRIDS */
+    .grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background: #111827;
+      width: 250px;
+      padding: 10px;
+      border-radius: 12px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* CONTACT */
+    .contact-box {
+      background: #111827;
+      padding: 20px;
+      border-radius: 12px;
+      display: inline-block;
+    }
+
+    footer {
+      background: #0f172a;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* SPACER (pour header fixe) */
+    .spacer {
+      height: 70px;
+    }
+  </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-    <h1>KANUJIBAY INTERNATIONAL BUSINESS</h1>
-    <p>France 🇫🇷 – Côte d'Ivoire 🇨🇮</p>
+  <div style="display:flex; align-items:center; gap:10px;">
+    <img src="logo.png" class="logo">
+    <strong>Kanujibay</strong>
+  </div>
+
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#services">Services</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <a class="btn" href="https://wa.me/33623956821">WhatsApp</a>
 </header>
 
-<div class="section">
-    <h2>Nos activités</h2>
-    <p>Import – Export de café</p>
-    <p>Mobilité étudiante</p>
-    <p>Services de traduction</p>
-</div>
+<div class="spacer"></div>
 
-<div class="section">
-    <h2>Contact</h2>
-    <p>📞 +33 6 37 33 30 66</p>
+<!-- HERO (AVION + CAFÉ) -->
+<section id="accueil" class="hero">
+  <h1>Kanujibay International Business</h1>
+  <p>
+    Import & Export de café vert depuis l’Afrique vers l’Europe et le monde.
+    Transport aérien, logistique et partenariats internationaux.
+  </p>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2>Nos Activités</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img src="1.png">
+      <p>Export Café Vert Côte d'Ivoire</p>
+    </div>
+
+    <div class="card">
+      <img src="2.png">
+      <p>Import / Export International</p>
+    </div>
+
+    <div class="card">
+      <img src="3.png">
+      <p>Partenariats Europe & Afrique</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIE (TES PDF / IMAGES) -->
+<section id="galerie">
+  <h2>Galerie & Projets</h2>
+
+  <div class="grid">
+    <div class="card"><img src="pdf diapo 4.png"></div>
+    <div class="card"><img src="pdf diapo 6.png"></div>
+    <div class="card"><img src="pdf diapo 7.png"></div>
+    <div class="card"><img src="pdf diapo 9.png"></div>
+    <div class="card"><img src="pdf diapo 10.png"></div>
+    <div class="card"><img src="pdf diapo 11.png"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+
+  <div class="contact-box">
     <p>📧 kanujibayinternationalbusiness@gmail.com</p>
-</div>
+    <p>📱 WhatsApp: +33623956821</p>
+    <p>📞 Tel: +33637333066</p>
+  </div>
+</section>
 
-<div class="section">
-    <a class="btn" href="https://wa.me/33637333066">Contact WhatsApp</a>
-</div>
+<!-- FOOTER -->
+<footer>
+  © 2026 Kanujibay International Business - All rights reserved
+</footer>
 
 </body>
 </html>
