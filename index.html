@@ -19,7 +19,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 15px 25px;
-      background: rgba(15, 23, 42, 0.95);
+      background: #0f172a;
       position: fixed;
       width: 100%;
       top: 0;
@@ -47,23 +47,12 @@
       text-decoration: none;
     }
 
-    /* SECTIONS */
-    section {
-      padding: 100px 20px;
-      text-align: center;
+    /* SPACER */
+    .spacer {
+      height: 70px;
     }
 
-    h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      margin-bottom: 20px;
-      color: #f8fafc;
-    }
-
-    /* HERO IMAGE (AVION + CAFÉ) */
+    /* HERO */
     .hero {
       background: url("0.png") center/cover no-repeat;
       height: 90vh;
@@ -71,19 +60,29 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
       text-shadow: 2px 2px 10px black;
     }
 
-    .hero p {
-      font-size: 18px;
-      max-width: 600px;
+    .hero h1 {
+      font-size: 40px;
     }
 
-    /* GRIDS */
+    /* SECTIONS */
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    /* GRID */
     .grid {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 20px;
     }
 
@@ -100,10 +99,10 @@
     }
 
     /* CONTACT */
-    .contact-box {
+    .contact {
       background: #111827;
       padding: 20px;
-      border-radius: 12px;
+      border-radius: 10px;
       display: inline-block;
     }
 
@@ -111,11 +110,6 @@
       background: #0f172a;
       padding: 20px;
       text-align: center;
-    }
-
-    /* SPACER (pour header fixe) */
-    .spacer {
-      height: 70px;
     }
   </style>
 </head>
@@ -141,13 +135,10 @@
 
 <div class="spacer"></div>
 
-<!-- HERO (AVION + CAFÉ) -->
+<!-- HERO -->
 <section id="accueil" class="hero">
   <h1>Kanujibay International Business</h1>
-  <p>
-    Import & Export de café vert depuis l’Afrique vers l’Europe et le monde.
-    Transport aérien, logistique et partenariats internationaux.
-  </p>
+  <p>Import - Export Café Vert - Afrique → Europe - Logistique internationale</p>
 </section>
 
 <!-- SERVICES -->
@@ -157,24 +148,24 @@
   <div class="grid">
     <div class="card">
       <img src="1.png">
-      <p>Export Café Vert Côte d'Ivoire</p>
+      <p>Export Café Vert</p>
     </div>
 
     <div class="card">
       <img src="2.png">
-      <p>Import / Export International</p>
+      <p>Commerce International</p>
     </div>
 
     <div class="card">
       <img src="3.png">
-      <p>Partenariats Europe & Afrique</p>
+      <p>Partenariats Europe/Afrique</p>
     </div>
   </div>
 </section>
 
-<!-- GALERIE (TES PDF / IMAGES) -->
+<!-- GALERIE IMAGES PDF -->
 <section id="galerie">
-  <h2>Galerie & Projets</h2>
+  <h2>Projets & Documents</h2>
 
   <div class="grid">
     <div class="card"><img src="pdf diapo 4.png"></div>
@@ -183,6 +174,18 @@
     <div class="card"><img src="pdf diapo 9.png"></div>
     <div class="card"><img src="pdf diapo 10.png"></div>
     <div class="card"><img src="pdf diapo 11.png"></div>
+    <div class="card"><img src="pdf diapo 12.png"></div>
+    <div class="card"><img src="pdf diapo 13.png"></div>
+    <div class="card"><img src="pdf diapo 14.png"></div>
+    <div class="card"><img src="pdf diapo 15.png"></div>
+    <div class="card"><img src="pdf diapo 16.png"></div>
+    <div class="card"><img src="pdf diapo 17.png"></div>
+    <div class="card"><img src="pdf diapo 18.png"></div>
+    <div class="card"><img src="pdf diapo 19.png"></div>
+    <div class="card"><img src="pdf diapo 20.png"></div>
+    <div class="card"><img src="pdf diapo 21.png"></div>
+    <div class="card"><img src="pdf diapo 22.png"></div>
+    <div class="card"><img src="pdf diapo 25.png"></div>
   </div>
 </section>
 
@@ -190,16 +193,15 @@
 <section id="contact">
   <h2>Contact</h2>
 
-  <div class="contact-box">
-    <p>📧 kanujibayinternationalbusiness@gmail.com</p>
-    <p>📱 WhatsApp: +33623956821</p>
-    <p>📞 Tel: +33637333066</p>
+  <div class="contact">
+    <p>Email: kanujibayinternationalbusiness@gmail.com</p>
+    <p>WhatsApp: +33623956821</p>
+    <p>Tel: +33637333066</p>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  © 2026 Kanujibay International Business - All rights reserved
+  © 2026 Kanujibay International Business
 </footer>
 
 </body>
